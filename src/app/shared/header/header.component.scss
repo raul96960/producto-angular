@@ -1,0 +1,28 @@
+.header__section {
+  height: 50px;
+  background-color: rgb(53, 53, 148);
+  margin-bottom: 10px;
+}
+
+.header__wrapper {
+  display: flex;
+  gap: 10px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__link {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header__link:hover {
+  color: rgb(187, 216, 236);
+}
+
+.active {
+  color: rgb(132, 132, 243);
+  font-weight: 700;
+}

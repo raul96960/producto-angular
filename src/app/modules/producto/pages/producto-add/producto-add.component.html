@@ -1,0 +1,93 @@
+<section class="table__section">
+  <div class="table__wrapper table-responsive">
+    <div class="table__header">
+      <h4>Productos</h4>
+      <button type="button" class="btn btn-primary" (click)="regresar()">
+        regresar
+      </button>
+    </div>
+    <form autocomplete="off" class="form__wrapper" [formGroup]="miFormulario" (ngSubmit)="guardar()">
+      <div class="mb-2">
+        <label for="nombre" class="form-label">nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombre"
+          formControlName="nombre"
+        />
+        <span class="fs-6 text-danger" *ngIf="campoValido('nombre')">
+          Este campo debe ser valido
+        </span>
+      </div>
+
+      <div class="mb-2">
+        <label for="descripcion" class="form-label">descripcion</label>
+        <input
+          type="text"
+          class="form-control"
+          id="descripcion"
+          formControlName="descripcion"
+        />
+        <span class="fs-6 text-danger" *ngIf="campoValido('descripcion')">
+          Este campo debe ser valido
+        </span>
+      </div>
+
+      <div class="mb-2">
+        <label for="stock" class="form-label">stock</label>
+        <input
+          type="number"
+          class="form-control"
+          id="stock"
+          formControlName="stock"
+        />
+        <span class="fs-6 text-danger" *ngIf="campoValido('stock')">
+          Este campo debe ser valido
+        </span>
+      </div>
+
+      <div class="mb-2">
+        <label for="precio" class="form-label">precio</label>
+        <input
+          type="number"
+          class="form-control"
+          id="precio"
+          formControlName="precio"
+        />
+        <span class="fs-6 text-danger" *ngIf="campoValido('precio')">
+          Este campo debe ser valido
+        </span>
+      </div>
+
+      <div class="mb-2">
+        <label for="categoriaId" class="form-label">categoriaId</label>
+        <!-- <input type="text" class="form-control" id="categoriaId" formControlName="categoriaId" /> -->
+        <select
+          formControlName="categoriaId"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected>elige una opcion</option>
+          <option *ngFor="let data of dataCategoria" [value]="data.id">
+            {{ data.nombre }}
+          </option>
+        </select>
+        <span class="fs-6 text-danger" *ngIf="campoValido('city')">
+          Este campo debe ser valido
+        </span>
+      </div>
+
+      <button type="button" class="btn btn-success" type="submit">
+        guardar
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        type="button"
+        (click)="regresar()"
+      >
+        cancelar
+      </button>
+    </form>
+  </div>
+</section>

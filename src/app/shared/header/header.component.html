@@ -1,0 +1,12 @@
+<nav class="header__section">
+  <div class="header__wrapper">
+    <a
+      class="header__link"
+      *ngFor="let item of menu"
+      [routerLink]="[item.ruta]"
+      routerLinkActive="active"
+    >
+      {{ item.texto }}
+    </a>
+  </div>
+</nav>

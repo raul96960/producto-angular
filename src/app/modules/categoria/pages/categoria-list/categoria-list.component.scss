@@ -1,0 +1,18 @@
+.table__section {
+  display: flex;
+  justify-content: center;
+}
+.table__wrapper {
+  width: 940px;
+}
+
+.table__header {
+  background-color: rgb(53, 53, 148);
+  padding-inline: 20px;
+  height: 70px;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}

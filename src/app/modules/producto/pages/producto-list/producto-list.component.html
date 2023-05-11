@@ -1,0 +1,52 @@
+<section class="table__section">
+  <div class="table__wrapper table-responsive">
+    <div class="table__header">
+      <h4>Productos</h4>
+      <button type="button" class="btn btn-primary" (click)="agregar()">Agregar</button>
+    </div>
+    <div class="table-responsive">
+      <table
+        class="table table-striped table-hover table-bordered table-content"
+      >
+        <thead class="table-light">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">nombre</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">stock</th>
+            <th scope="col">precio</th>
+            <th scope="col">acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataSource">
+            <th scope="row">{{ data.id }}</th>
+            <th scope="row">{{ data.nombre }}</th>
+            <th scope="row">{{ data.descripcion }}</th>
+            <th scope="row">{{ data.stock }}</th>
+            <th scope="row">{{ data.precio }}</th>
+            <th scope="row">
+              <button
+                class="btn btn btn-success"
+                type="button"
+                (click)="editar(data.id)"
+              >
+                <!-- <i class="uil uil uil-estate"></i> -->
+                editar
+              </button>
+              <button
+                class="btn btn-danger"
+                type="button"
+                (click)="borrar(data.id)"
+              >
+                <!-- <i class="uil uil uil-estate"></i> -->
+                borrar
+              </button>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
