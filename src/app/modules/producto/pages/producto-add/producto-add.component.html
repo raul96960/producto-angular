@@ -3,7 +3,10 @@
     <div class="table__header">
       <h4>Productos</h4>
       <button type="button" class="btn btn-primary" (click)="regresar()">
-        regresar
+        <div class="button-content">
+          <i class="uil uil-arrow-left"></i>
+          regresar
+        </div>
       </button>
     </div>
     <form autocomplete="off" class="form__wrapper" [formGroup]="miFormulario" (ngSubmit)="guardar()">
@@ -67,7 +70,6 @@
           class="form-select"
           aria-label="Default select example"
         >
-          <option selected>elige una opcion</option>
           <option *ngFor="let data of dataCategoria" [value]="data.id">
             {{ data.nombre }}
           </option>

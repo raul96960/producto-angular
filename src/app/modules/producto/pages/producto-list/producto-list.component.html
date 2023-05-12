@@ -2,7 +2,12 @@
   <div class="table__wrapper table-responsive">
     <div class="table__header">
       <h4>Productos</h4>
-      <button type="button" class="btn btn-primary" (click)="agregar()">Agregar</button>
+      <button type="button" class="btn btn-primary" (click)="agregar()">
+        <div class="button-content">
+          <i class="uil uil-plus"></i>
+          agregar
+        </div>
+      </button>
     </div>
     <div class="table-responsive">
       <table
@@ -31,7 +36,7 @@
                 type="button"
                 (click)="editar(data.id)"
               >
-                <!-- <i class="uil uil uil-estate"></i> -->
+                <i class="uil uil-edit-alt"></i>
                 editar
               </button>
               <button
@@ -39,7 +44,7 @@
                 type="button"
                 (click)="borrar(data.id)"
               >
-                <!-- <i class="uil uil uil-estate"></i> -->
+                <i class="uil uil-trash-alt"></i>
                 borrar
               </button>
             </th>
@@ -49,4 +54,3 @@
     </div>
   </div>
 </section>
-
